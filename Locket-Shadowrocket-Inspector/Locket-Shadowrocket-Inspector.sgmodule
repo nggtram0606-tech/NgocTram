@@ -1,0 +1,9 @@
+#!name=Locket Subscription Inspector
+#!desc=Read-only inspector for Locket RevenueCat subscriber responses
+#!category=Debug
+
+[Script]
+Locket Subscription Inspector = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+$,script-path=https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY/main/Locket-Subscription-Inspector.js,requires-body=true,max-size=-1,timeout=60
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com
